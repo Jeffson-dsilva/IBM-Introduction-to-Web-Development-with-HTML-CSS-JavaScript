@@ -1,14 +1,11 @@
 function addRecommendation() {
-    // Get the new recommendation message
     const newRecommendation = document.getElementById('new_recommendation').value;
 
-    // Validate the input
     if (newRecommendation.trim() === '') {
         alert('Please enter a message.');
         return;
     }
 
-    // Create a new div element for the recommendation
     const newRecElement = document.createElement('div');
     newRecElement.classList.add('recommendation');
 
@@ -26,7 +23,6 @@ function addRecommendation() {
     document.getElementById('new_recommendation').value = '';
 }
 
-// Add an event listener to the popup "Ok" button to close the popup when clicked
 document.querySelector('#popup button').addEventListener('click', () => {
     document.getElementById('popup').style.display = 'none';
 });
